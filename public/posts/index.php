@@ -11,7 +11,6 @@ while ($row = $stmt->fetch())
 }
 
 $content .= <<<EOT
-<p></p>
 <div class="form-group">
     <a href="add.php" class="btn btn-primary">New Post</a>
 </div>

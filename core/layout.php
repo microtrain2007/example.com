@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>Hello Welcome to MicroTrain2007</title>
+      <title>Hello Welcome to MicroTrain2005</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- <link rel="stylesheet" type="text/css" href="../../public/dist/css/main.min.css"> -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
       <div class="container">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">MicroTrain2007 Blog</a>
+            <a class="navbar-brand" href="#">MicroTrain2005 Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,7 +29,7 @@
 
       <div class="jumbotron">
             <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">Welcome to MicroTrain2007 Blog, Full Stack Web and Hybrid Mobile Applications Developer.</p>
+            <p class="lead">Welcome to MicroTrain2005 Blog, Full Stack Web and Hybrid Mobile Applications Developer.</p>
             <hr class="my-4">
             <p>You will learn front-end and client-side development starting with HTML, CSS and JavaScript. You will then work with libraries and frameworks such as jQuery, Bootstrap and Angular. You will learn how you can use web technology to build hybrid mobile applications using Apache’s Cordova. 
                 You will learn how to work with third party APIs from vendors such as Google, Nasa, Twilio and LinkedIn. You will learn the server side by working with LAMP (Linux, Apache, MySQL, PHP) and MEAN (MongoDB, Express, Angular, Node,js) stacks. You will apply you newly acquired backend knowledge to build your own cloud-based server.
