@@ -34,8 +34,8 @@ function active($name){
       <meta charset="UTF-8">
       <title>Hello Welcome to MicroTrain2007</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="../public/dist/css/main.min.css">
-      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
+      <!-- <link rel="stylesheet" type="text/css" href="../../public/dist/css/main.min.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   </head>
     <body>
 
@@ -49,34 +49,42 @@ function active($name){
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="./posts/">Posts <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="./users/">Users <span class="sr-only">(current)</span></a>
+                <!-- <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> -->
                 <li class="nav-item">
-                <a class="nav-link" href="/logout.php">Logout</a>
+                  <a class="nav-link <?php echo active('/'); ?>" href="index.php">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link <?php echo active('resume.php'); ?>" href="resume.php">Resume</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link <?php echo active('contact.php'); ?>" href="contact.php">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link <?php echo active('/posts/'); ?>" href="posts/">Posts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link <?php echo active('/users/'); ?>" href="users/">Users</a>
                 </li>
 
                 <li class="nav-item">
-                <a class="nav-link" href="/login.php">Login</a>
+                  <?php if(!empty($_SESSION['user']['id'])): ?>
+                    <a class="nav-link" href="logout.php">Logout</a>
+                  <?php else: ?>
+                    <a class="nav-link <?php echo active('login.php'); ?>" href="login.php">Login</a>
+                  <?php endif; ?>
                 </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="/register.php">Register</a>
-                </li>
-                <!-- <a class="nav-item nav-link" href="resume.html">Resume</a>
-                <a class="nav-item nav-link" href="contact.html">Contact</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+               <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
               </div>
             </div>
       </nav>
 
       <div class="jumbotron">
             <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">Welcome to MicroTrain2005 Blog, Full Stack Web and Hybrid Mobile Applications Developer.</p>
+            <p class="lead">Welcome to MicroTrain2007 Blog, Full Stack Web and Hybrid Mobile Applications Developer.</p>
             <hr class="my-4">
-            <p>You will learn front-end and client-side development starting with HTML, CSS and JavaScript. You will then work with libraries and frameworks such as jQuery, Bootstrap and Angular. You will learn how you can use web technology to build hybrid mobile applications using Apache’s Cordova. 
+            <!-- <p>You will learn front-end and client-side development starting with HTML, CSS and JavaScript. You will then work with libraries and frameworks such as jQuery, Bootstrap and Angular. You will learn how you can use web technology to build hybrid mobile applications using Apache’s Cordova. 
                 You will learn how to work with third party APIs from vendors such as Google, Nasa, Twilio and LinkedIn. You will learn the server side by working with LAMP (Linux, Apache, MySQL, PHP) and MEAN (MongoDB, Express, Angular, Node,js) stacks. You will apply you newly acquired backend knowledge to build your own cloud-based server.
-                Additionally, you will learn security best practices and mobile first design concepts as well as extreme programming, agile and scrum methodologies. You will apply these skills throughout the course building an array of applications to add to your project portfolio.</p>     
+                Additionally, you will learn security best practices and mobile first design concepts as well as extreme programming, agile and scrum methodologies. You will apply these skills throughout the course building an array of applications to add to your project portfolio.</p>      -->
             <!-- <a class="btn btn-primary btn-lg" href="contact.html" role="button">Request Information</a> -->
       </div>
       <!-- Start Content Card -->
@@ -88,7 +96,7 @@ function active($name){
         <p class="card-text"><?php echo $content; ?></p>
       </div>
       <div class="card-footer text-muted">
-        Created June 2020
+        Created August 2020
       </div>
       <!-- End Content Card -->
       </div>
@@ -163,5 +171,23 @@ function active($name){
 
     
       </div>
+
+      <!-- <script>
+        var toggleMenu = document.getElementById('toggleMenu');
+        var nav = document.querySelector('nav');
+        toggleMenu.addEventListener(
+          'click',
+          function(){
+            if(nav.style.display=='block'){
+              nav.style.display='none';
+            }else{
+              nav.style.display='block';
+            }
+          }
+        );
+      </script> -->
+  
+
     </body>
+
 </html>
