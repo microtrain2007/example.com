@@ -1,6 +1,6 @@
 <?php
-require '../../config/keys.php';
 include '../../core/db_connect.php';
+require '../../core/bootstrap.php';
 
 $content="<h1>Blog Posts</h1>";
 $stmt = $pdo->query('SELECT * FROM posts');

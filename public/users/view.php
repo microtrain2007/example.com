@@ -1,7 +1,7 @@
 <?php
-require '../../config/keys.php';
 require '../../core/db_connect.php';
-// require '../../core/sessions.php';
+require '../../core/bootstrap.php';
+// checkSession();
 
 $input = filter_input_array(INPUT_GET);
 

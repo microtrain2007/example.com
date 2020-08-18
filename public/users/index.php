@@ -1,6 +1,7 @@
 <?php
-require '../../config/keys.php';
 include '../../core/db_connect.php';
+require '../../core/bootstrap.php';
+checkSession();
 
 $content="<h1>Users</h1>";
 $stmt = $pdo->query('SELECT * FROM users');

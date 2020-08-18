@@ -1,11 +1,41 @@
+<!-- Set session in php -->
+<?php
+function active($name){
+  $current = $_SERVER['REQUEST_URI'];
+  if($current === $name){
+    return 'active';
+  }
+
+  return null;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<!-- Add sanitized content -->
+  <?php if(!empty($meta)): ?>
+
+<?php if(!empty($meta['title'])): ?>
+  <title><?php echo $meta['title']; ?></title>
+<?php endif; ?>
+
+<?php if(!empty($meta['description'])): ?>
+  <meta name="description" content="<?php echo $meta['description']; ?>">
+<?php endif; ?>
+
+<?php if(!empty($meta['keywords'])): ?>
+  <meta name="keywords" content="<?php echo $meta['keywords']; ?>">
+<?php endif; ?>
+
+<?php endif; ?>
+<!-- End sanitized content -->
+
       <meta charset="UTF-8">
-      <title>Hello Welcome to MicroTrain2005</title>
+      <title>Hello Welcome to MicroTrain2007</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- <link rel="stylesheet" type="text/css" href="../../public/dist/css/main.min.css"> -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../public/dist/css/main.min.css">
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
   </head>
     <body>
 
@@ -13,13 +43,26 @@
       <div class="container">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">MicroTrain2005 Blog</a>
+            <a class="navbar-brand" href="#">MicroTrain2007 Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="./posts/">Posts <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="./users/">Users <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                <a class="nav-link" href="/logout.php">Logout</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/login.php">Login</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/register.php">Register</a>
+                </li>
                 <!-- <a class="nav-item nav-link" href="resume.html">Resume</a>
                 <a class="nav-item nav-link" href="contact.html">Contact</a>
                 <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
